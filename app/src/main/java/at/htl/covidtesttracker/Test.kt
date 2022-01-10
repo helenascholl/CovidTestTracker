@@ -6,9 +6,9 @@ import java.time.LocalDateTime
 
 @Parcelize
 class Test(
-    private val id: String,
-    private val date: LocalDateTime,
-    private val result: TestResult,
-    private val location: String
+    val id: String,
+    val date: LocalDateTime,
+    val result: TestResult,
+    val location: String
 ) : Parcelable {
 }
