@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import at.htl.covidtesttracker.databinding.FragmentListBinding
+import java.time.format.DateTimeFormatter
 
 class ListFragment : Fragment() {
 
@@ -25,10 +26,35 @@ class ListFragment : Fragment() {
 
         val adapter = ArrayAdapter(
             requireContext(),
-            android.R.layout.simple_list_item_1, items
+            android.R.layout.simple_list_item_1, items.map(this::toListString)
         )
         binding.list.adapter = adapter
 
         return binding.root
     }
+
+    private fun toListString(test: Test): String {
+        val id = if (test.id.length >= 8) {
+            "${test.id.substring(0, 2)}...${test.id.substring(test.id.length - 4)}"
+        } else {
+            test.id
+        }
+
+        var date = test.date.format(DateTimeFormatter.ISO_DATE_TIME)
+        date = date.substring(0, date.length - 3)
+
+        val result = when (test.result) {
+            TestResult.POSITIV -> "pos"
+            TestResult.NEGATIV -> "neg"
+        }
+
+        val location = if (test.location.length >= 22) {
+            "${test.location.substring(0, 10)}...${test.location.substring(test.location.length - 10)}"
+        } else {
+            test.location
+        }
+
+        return "$id;$date;$result;$location"
+    }
+
 }
