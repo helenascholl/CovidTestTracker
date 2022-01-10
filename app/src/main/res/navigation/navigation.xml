@@ -27,5 +27,16 @@
         <action
             android:id="@+id/action_listFragment_to_inputFragment"
             app:destination="@id/inputFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_dayOverviewFragment"
+            app:destination="@id/dayOverviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dayOverviewFragment"
+        android:name="at.htl.covidtesttracker.DayOverviewFragment"
+        android:label="DayOverviewFragment">
+        <argument
+            android:name="tests"
+            app:argType="at.htl.covidtesttracker.Test[]" />
     </fragment>
 </navigation>
