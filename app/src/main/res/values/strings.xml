@@ -8,4 +8,6 @@
     <string name="location">Location</string>
     <string name="time">Time</string>
     <string name="save">Save</string>
+    <string name="add_test">Add Test</string>
+    <string name="day_overview">Day Overview</string>
 </resources>
