@@ -73,7 +73,7 @@
             android:layout_marginStart="@dimen/horizontal_padding"
             android:ems="10"
             android:hint="000000"
-            android:inputType="number"
+            android:inputType="text"
             app:layout_constraintBaseline_toBaselineOf="@+id/id"
             app:layout_constraintStart_toStartOf="@+id/guideline" />
 
