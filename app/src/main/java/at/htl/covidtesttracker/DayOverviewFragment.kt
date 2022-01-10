@@ -40,7 +40,8 @@ class DayOverviewFragment : Fragment() {
         }
 
         binding.locationTests.text =
-            testsByLocation.keys.joinToString("\n") { "$it: ${testsByLocation[it]} people tested" }
+            testsToday.groupBy { it.location }.map { "${it.key}: ${it.value.size} people tested" }
+                .joinToString("\n")
 
         return binding.root
     }
