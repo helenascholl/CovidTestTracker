@@ -40,7 +40,7 @@ class InputFragment : Fragment() {
 
         binding.save.setOnClickListener { view ->
             val result = Test(
-                binding.id.text.toString(),
+                binding.editId.text.toString(),
                 LocalDateTime.parse(
                     "${binding.editDate.text}T${binding.editTime.text}",
                     DateTimeFormatter.ofPattern("dd/MM/yyyy'T'HH:mm")
