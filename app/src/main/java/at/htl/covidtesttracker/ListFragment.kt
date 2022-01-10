@@ -15,7 +15,9 @@ class ListFragment : Fragment() {
 
     private lateinit var binding: FragmentListBinding
     private val args: ListFragmentArgs by navArgs()
-    private var items: MutableList<Test> = ArrayList()
+    private companion object {
+        var items: MutableList<Test> = ArrayList()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
