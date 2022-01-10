@@ -2,4 +2,9 @@
     <string name="app_name">CovidTestTracker</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="id">ID</string>
+    <string name="date">Date</string>
+    <string name="result">Result</string>
+    <string name="location">Location</string>
+    <string name="time">Time</string>
 </resources>
