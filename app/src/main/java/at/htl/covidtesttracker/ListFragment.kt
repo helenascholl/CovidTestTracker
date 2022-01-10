@@ -39,6 +39,14 @@ class ListFragment : Fragment() {
                 .navigate(R.id.action_listFragment_to_inputFragment)
         }
 
+        val action =
+            ListFragmentDirections.actionListFragmentToDayOverviewFragment(items.toTypedArray())
+        binding.dayOverview.setOnClickListener { view ->
+            view
+                .findNavController()
+                .navigate(action)
+        }
+
         return binding.root
     }
 
