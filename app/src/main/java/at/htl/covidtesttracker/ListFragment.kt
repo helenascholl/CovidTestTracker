@@ -23,7 +23,7 @@ class ListFragment : Fragment() {
     ): View {
         binding = FragmentListBinding.inflate(inflater, container, false)
 
-        args.result?.let {
+        args.test?.let {
             items.add(it)
         }
 

@@ -20,7 +20,7 @@
         android:label="fragment_list"
         tools:layout="@layout/fragment_list">
         <argument
-            android:name="result"
+            android:name="test"
             app:argType="at.htl.covidtesttracker.Test"
             app:nullable="true"
             android:defaultValue="@null" />
