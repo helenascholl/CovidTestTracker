@@ -53,8 +53,8 @@ class ListFragment : Fragment() {
         date = date.substring(0, date.length - 3)
 
         val result = when (test.result) {
-            TestResult.POSITIV -> "pos"
-            TestResult.NEGATIV -> "neg"
+            TestResult.POSITIVE -> "pos"
+            TestResult.NEGATIVE -> "neg"
         }
 
         val location = if (test.location.length >= 22) {
