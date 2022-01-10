@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/horizontal_padding"
             android:ems="10"
-            android:hint="000000"
+            android:hint="OÖ000000000000"
             android:inputType="text"
             app:layout_constraintBaseline_toBaselineOf="@+id/id"
             app:layout_constraintStart_toStartOf="@+id/guideline" />
@@ -83,6 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/horizontal_padding"
             android:ems="10"
+            android:hint="31/01/2020"
             android:inputType="date"
             app:layout_constraintBaseline_toBaselineOf="@+id/date"
             app:layout_constraintStart_toStartOf="@+id/guideline" />
@@ -93,6 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/horizontal_padding"
             android:ems="10"
+            android:hint="16:00"
             android:inputType="time"
             app:layout_constraintBaseline_toBaselineOf="@+id/time"
             app:layout_constraintStart_toStartOf="@+id/guideline" />
